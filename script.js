@@ -3,8 +3,8 @@ const imgAprovado = `<img src="img/aprovado.png" alt="emoji festejando"> `;
 const imgReprovado = `<img src="img/reprovado.png" alt="emoji decepcionado"/>`;
 const atividades = [];
 const notas = [];
-const spamAprovado = "<span class = "resultado aprovado">Aprovado</spam>";
-const spamReprovado = "<span class = "resultado reprovado">Reprovado</spam>";
+const spamAprovado = `<span class = "resultado aprovado">Aprovado</spam>`;
+const spamReprovado = `<span class = "resultado reprovado">Reprovado</spam>`;
 let linhas = "";
 
 form.addEventListener("submit", function (e) {
@@ -44,7 +44,7 @@ function atualizaTabela() {
 function atualizaMediaFinal() {
     const mediaFinal = calculaMediaFinal();
     document.getElementById("media-final-valor").innerHTML = mediaFinal;
-    document.getElementById("media-final-resultado").innerHTML = mediaFinal >= 7 ? "spamAprovado" : "spamReprovado";
+    document.getElementById("media-final-resultado").innerHTML = mediaFinal >= 7 ? spamAprovado : spamReprovado;
     console.log(mediaFinal);
 }
 
